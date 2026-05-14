@@ -8,12 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       background: radial-gradient(circle at 10% 20%, #0b0c10, #030405);
       font-family: 'Inter', sans-serif;
@@ -21,381 +16,231 @@
       line-height: 1.5;
       scroll-behavior: smooth;
     }
-
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #111418;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #ff7b2c;
-      border-radius: 12px;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-      transition: 0.2s ease;
-    }
-
-    .container {
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    /* navbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #111418; }
+    ::-webkit-scrollbar-thumb { background: #ff7b2c; border-radius: 12px; }
+    a { text-decoration: none; color: inherit; transition: 0.2s ease; }
+    .container { max-width: 1300px; margin: 0 auto; padding: 0 2rem; }
     .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      padding: 1.5rem 0 1rem 0;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; padding: 1.5rem 0 1rem 0;
       border-bottom: 1px solid rgba(255, 123, 44, 0.2);
     }
     .logo {
-      font-size: 1.8rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
+      font-size: 1.8rem; font-weight: 800;
       background: linear-gradient(135deg, #FF9966, #FF5E62);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+      -webkit-background-clip: text; background-clip: text; color: transparent;
     }
-    .logo span {
-      font-size: 1.9rem;
-    }
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      font-weight: 500;
-    }
-    .nav-links a {
-      position: relative;
-      font-size: 1rem;
-      padding-bottom: 0.25rem;
-    }
-    .nav-links a:hover {
-      color: #ff7b2c;
-    }
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0%;
-      height: 2px;
-      background: #ff7b2c;
-      transition: width 0.2s;
-    }
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
+    .nav-links { display: flex; gap: 2rem; font-weight: 500; }
+    .nav-links a:hover { color: #ff7b2c; }
     .btn-primary {
       background: linear-gradient(95deg, #ff7b2c, #ff4d4d);
-      border: none;
-      padding: 0.8rem 1.8rem;
-      border-radius: 40px;
-      font-weight: 600;
-      font-size: 1rem;
-      color: white;
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
+      border: none; padding: 0.8rem 1.8rem; border-radius: 40px;
+      font-weight: 600; color: white; cursor: pointer;
+      display: inline-flex; align-items: center; gap: 0.5rem;
       box-shadow: 0 8px 18px rgba(255, 75, 43, 0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 25px rgba(255, 75, 43, 0.4);
-    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(255, 75, 43, 0.4); }
     .btn-outline {
-      background: transparent;
-      border: 1.5px solid #ff7b2c;
-      padding: 0.7rem 1.5rem;
-      border-radius: 40px;
-      font-weight: 500;
-      transition: 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
+      background: transparent; border: 1.5px solid #ff7b2c;
+      padding: 0.7rem 1.5rem; border-radius: 40px; font-weight: 500;
+      transition: 0.2s; display: inline-flex; align-items: center; gap: 0.5rem;
     }
-    .btn-outline:hover {
-      background: rgba(255, 123, 44, 0.12);
-      border-color: #ff9966;
-    }
-
-    /* hero */
-    .hero {
-      padding: 5rem 0 4rem 0;
-      text-align: center;
-    }
+    .btn-outline:hover { background: rgba(255, 123, 44, 0.12); border-color: #ff9966; }
+    .hero { padding: 5rem 0 4rem 0; text-align: center; }
     .hero-badge {
-      background: rgba(255, 123, 44, 0.15);
-      backdrop-filter: blur(4px);
-      border-radius: 100px;
-      padding: 0.35rem 1rem;
-      display: inline-block;
-      font-size: 0.85rem;
-      font-weight: 500;
-      margin-bottom: 1.5rem;
+      background: rgba(255, 123, 44, 0.15); backdrop-filter: blur(4px);
+      border-radius: 100px; padding: 0.35rem 1rem; display: inline-block;
+      font-size: 0.85rem; font-weight: 500; margin-bottom: 1.5rem;
       border: 1px solid rgba(255, 123, 44, 0.3);
     }
     .hero h1 {
-      font-size: 3.3rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
+      font-size: 3.3rem; font-weight: 800;
       background: linear-gradient(to right, #ffffff, #ffb88c);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+      -webkit-background-clip: text; background-clip: text; color: transparent;
       margin-bottom: 1rem;
     }
-    .hero p {
-      font-size: 1.25rem;
-      max-width: 700px;
-      margin: 0 auto 2rem auto;
-      color: #cbd5e1;
-    }
-
-    section {
-      padding: 5rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    .section-title {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      text-align: center;
-      letter-spacing: -0.01em;
-    }
-    .section-sub {
-      text-align: center;
-      color: #a0abb9;
-      margin-bottom: 3rem;
-      font-size: 1.05rem;
-    }
-
-    /* game showcase */
+    .hero p { font-size: 1.25rem; max-width: 700px; margin: 0 auto 2rem auto; color: #cbd5e1; }
+    section { padding: 5rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .section-title { font-size: 2.2rem; font-weight: 700; margin-bottom: 1rem; text-align: center; }
+    .section-sub { text-align: center; color: #a0abb9; margin-bottom: 3rem; font-size: 1.05rem; }
+    
+    /* game showcase (current project) */
     .game-showcase {
-      max-width: 900px;
-      margin: 0 auto;
-      background: rgba(20, 25, 35, 0.65);
-      backdrop-filter: blur(4px);
-      border-radius: 32px;
-      padding: 2.5rem;
-      border: 1px solid rgba(255, 123, 44, 0.3);
-      text-align: center;
+      max-width: 900px; margin: 0 auto; background: rgba(20, 25, 35, 0.65);
+      backdrop-filter: blur(4px); border-radius: 32px; padding: 2.5rem;
+      border: 1px solid rgba(255, 123, 44, 0.3); text-align: center;
     }
-    .game-icon {
-      font-size: 4rem;
-      color: #ff7b2c;
-      margin-bottom: 1rem;
-    }
-    .game-showcase h2 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-    }
+    .game-icon { font-size: 4rem; color: #ff7b2c; margin-bottom: 1rem; }
+    .game-showcase h2 { font-size: 2.2rem; margin-bottom: 0.5rem; }
     .game-genre {
-      display: inline-block;
-      background: rgba(255, 123, 44, 0.2);
-      padding: 0.3rem 1rem;
-      border-radius: 40px;
-      font-size: 0.8rem;
-      font-weight: 600;
+      display: inline-block; background: rgba(255, 123, 44, 0.2);
+      padding: 0.3rem 1rem; border-radius: 40px; font-size: 0.8rem; font-weight: 600;
       margin-bottom: 1rem;
     }
-    .game-desc {
-      font-size: 1.1rem;
-      color: #e2e8f0;
-      margin-bottom: 1.5rem;
-    }
+    .game-desc { font-size: 1.1rem; color: #e2e8f0; margin-bottom: 1.5rem; }
     .game-status {
-      background: rgba(0,0,0,0.5);
-      border-radius: 60px;
-      padding: 0.6rem 1.2rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      margin-bottom: 1.8rem;
-      font-weight: 500;
+      background: rgba(0,0,0,0.5); border-radius: 60px; padding: 0.6rem 1.2rem;
+      display: inline-flex; align-items: center; gap: 0.6rem; margin-bottom: 1.8rem;
     }
-    .release-badge {
-      background: #ff7b2c;
-      color: #0b0c10;
-      padding: 0.4rem 1rem;
-      border-radius: 40px;
-      font-weight: 700;
-      font-size: 0.9rem;
-    }
+    .release-badge { background: #ff7b2c; color: #0b0c10; padding: 0.4rem 1rem; border-radius: 40px; font-weight: 700; }
 
-    .about-content {
-      max-width: 900px;
-      margin: 0 auto;
-      background: rgba(10, 14, 23, 0.6);
-      border-radius: 32px;
-      padding: 2.5rem;
-      border: 1px solid rgba(255,123,44,0.2);
-      text-align: center;
+    /* upcoming games grid */
+    .games-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem; margin-top: 2rem;
     }
-    .about-text {
-      font-size: 1.05rem;
-      color: #e2e8f0;
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
+    .game-card {
+      background: rgba(20, 25, 35, 0.65); backdrop-filter: blur(4px);
+      border-radius: 28px; padding: 1.5rem; transition: 0.25s;
+      border: 1px solid rgba(255, 123, 44, 0.2); text-align: center;
     }
-    .dev-link {
-      margin-top: 1rem;
-      font-size: 0.9rem;
+    .game-card:hover { transform: translateY(-8px); border-color: #ff7b2c; background: rgba(25, 30, 42, 0.8); }
+    .game-card-img {
+      width: 100%; height: 180px; object-fit: cover; border-radius: 20px;
+      margin-bottom: 1rem; background: #1e2532;
     }
-    .dev-link a {
-      color: #ff7b2c;
-      text-decoration: underline;
-    }
-
-    .contact-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-    .contact-card {
-      background: #11161f;
-      border-radius: 2rem;
-      padding: 1.5rem 2rem;
-      min-width: 200px;
-      text-align: center;
-      border: 1px solid #2a2f3a;
-      transition: 0.2s;
-    }
-    .contact-card i {
-      font-size: 2rem;
-      color: #ff7b2c;
+    .game-card h3 { font-size: 1.6rem; margin-bottom: 0.3rem; }
+    .game-tag {
+      background: rgba(255, 123, 44, 0.2); display: inline-block;
+      padding: 0.2rem 0.8rem; border-radius: 40px; font-size: 0.7rem;
       margin-bottom: 0.8rem;
     }
-    .contact-card h4 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+    .game-card p { color: #bac8dc; font-size: 0.9rem; margin-bottom: 1rem; }
+    .game-card .game-status-small { font-size: 0.8rem; color: #ffbc8c; margin-bottom: 1rem; }
+
+    .about-content {
+      max-width: 900px; margin: 0 auto; background: rgba(10, 14, 23, 0.6);
+      border-radius: 32px; padding: 2.5rem; border: 1px solid rgba(255,123,44,0.2);
+      text-align: center;
     }
-    .contact-card a {
-      color: #ffb88c;
-      word-break: break-all;
+    .contact-grid {
+      display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem;
     }
+    .contact-card {
+      background: #11161f; border-radius: 2rem; padding: 1.5rem 2rem;
+      min-width: 200px; text-align: center; border: 1px solid #2a2f3a;
+    }
+    .contact-card i { font-size: 2rem; color: #ff7b2c; margin-bottom: 0.8rem; }
     .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 2rem;
-      flex-wrap: wrap;
+      display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap;
     }
     .social-links a {
-      background: #1e2a36;
-      width: 52px;
-      height: 52px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 60px;
-      font-size: 1.6rem;
-      transition: all 0.2s;
+      background: #1e2a36; width: 52px; height: 52px; display: flex;
+      align-items: center; justify-content: center; border-radius: 60px;
+      font-size: 1.6rem; transition: 0.2s;
     }
-    .social-links a:hover {
-      background: #ff7b2c;
-      transform: translateY(-5px);
-      color: #0b0c10;
-    }
-
+    .social-links a:hover { background: #ff7b2c; transform: translateY(-5px); color: #0b0c10; }
     .old-site-card {
-      background: rgba(255,123,44,0.08);
-      border-radius: 28px;
-      padding: 1.2rem;
-      margin-top: 2rem;
-      text-align: center;
-      border: 1px dashed #ff7b2c;
+      background: rgba(255,123,44,0.08); border-radius: 28px; padding: 1.2rem;
+      margin-top: 2rem; text-align: center; border: 1px dashed #ff7b2c;
     }
-
-    footer {
-      text-align: center;
-      padding: 2rem 0 2.5rem;
-      color: #7e8a98;
-      font-size: 0.85rem;
-    }
-
+    footer { text-align: center; padding: 2rem 0 2.5rem; color: #7e8a98; font-size: 0.85rem; }
     @media (max-width: 780px) {
-      .container {
-        padding: 0 1.5rem;
-      }
-      .navbar {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-      .section-title {
-        font-size: 1.9rem;
-      }
-      .game-showcase h2 {
-        font-size: 1.8rem;
-      }
+      .container { padding: 0 1.5rem; }
+      .navbar { flex-direction: column; gap: 1rem; }
+      .hero h1 { font-size: 2.5rem; }
     }
-    .highlight {
-      color: #ff7b2c;
-    }
+    .highlight { color: #ff7b2c; }
   </style>
 </head>
 <body>
 
 <div class="container">
   <nav class="navbar">
-    <div class="logo">
-      🥧 ThePieHype <span>|</span> studio
-    </div>
+    <div class="logo">🥧 ThePieHype <span>|</span> studio</div>
     <div class="nav-links">
       <a href="#home">Home</a>
-      <a href="#game">Game</a>
+      <a href="#current">Current Game</a>
+      <a href="#upcoming">Upcoming</a>
       <a href="#about">About</a>
       <a href="#contact">Connect</a>
     </div>
   </nav>
 
+  <!-- HERO SECTION -->
   <section id="home">
     <div class="hero">
-      <div class="hero-badge">
-        <i class="fas fa-gamepad"></i> solo indie dev · pieDev
-      </div>
+      <div class="hero-badge"><i class="fas fa-gamepad"></i> solo indie dev · pieDev</div>
       <h1>Indie Dev making <br> interesting games</h1>
       <p>Turn simple ideas into sharp, tactical experiences. Easy to pick up, hard to put down.</p>
       <div class="hero-buttons">
-        <a href="#game" class="btn-primary"><i class="fas fa-chess-board"></i> Meet MedievalBattleLines</a>
+        <a href="#current" class="btn-primary"><i class="fas fa-chess-board"></i> Meet MedievalBattleLines</a>
         <a href="https://thepiehype.itch.io/" target="_blank" class="btn-outline"><i class="fab fa-itch-io"></i> Itch.io profile</a>
       </div>
     </div>
   </section>
 
-  <section id="game">
+  <!-- CURRENT MAIN GAME (Pie's MedievalBattleLines) -->
+  <section id="current">
     <div class="section-title">⚔️ current project</div>
     <div class="section-sub">every move matters</div>
     <div class="game-showcase">
       <div class="game-icon"><i class="fas fa-chess-queen"></i></div>
       <h2>Pie's MedievalBattleLines</h2>
-      <div class="game-genre"><i class="fas fa-tag"></i> Turn-based strategy game</div>
-      <div class="game-desc">
-        A turn-based strategy game where every move matters. Position your units, break enemy lines, and outthink your opponent in fast, tense matches. No fluff — just smart tactics and satisfying plays.
-      </div>
+      <div class="game-genre">Turn-based strategy game</div>
+      <div class="game-desc">A turn-based strategy game where every move matters. Position your units, break enemy lines, and outthink your opponent in fast, tense matches.</div>
       <div class="game-status">
         <i class="fas fa-hammer"></i> Status: <strong class="highlight">Polishing</strong>
         <i class="fas fa-calendar-alt" style="margin-left: 0.8rem;"></i> Release: <span class="release-badge">Coming May 2026</span>
       </div>
-      <button class="btn-primary notify-btn" style="background: #222; box-shadow: none; border: 1px solid #ff7b2c;"><i class="fas fa-bell"></i> Notify me when ready</button>
-      <p style="font-size: 0.8rem; margin-top: 1rem;">🎯 Final polish stage – launch this month</p>
+      <button class="btn-primary notify-btn" style="background: #222; box-shadow: none; border: 1px solid #ff7b2c;"><i class="fas fa-bell"></i> Notify me</button>
     </div>
   </section>
 
+  <!-- ========== UPCOMING GAMES SECTION ========== -->
+  <!-- 
+    ✏️✏️✏️ HOW TO EDIT GAMES (3 slots) ✏️✏️✏️
+    1. For each game, find the <div class="game-card"> block below.
+    2. Change the text inside <h3> for game title.
+    3. Change the <div class="game-tag"> for genre/category.
+    4. Change the <p> for description.
+    5. Change the <div class="game-status-small"> for status.
+    6. IMAGES: Name your image files exactly:
+         - picture1.jpeg  (first game)
+         - picture2.jpeg  (second game)
+         - picture3.jpeg  (third game)
+       Place them in the same folder as this HTML file.
+       If an image is missing, a grey placeholder will appear.
+  -->
+  <section id="upcoming">
+    <div class="section-title">🍕 more pies in the oven</div>
+    <div class="section-sub">upcoming games · stay hyped</div>
+    <div class="games-grid">
+      
+      <!-- GAME SLOT 1 -->
+      <div class="game-card">
+        <img class="game-card-img" src="picture1.jpeg" alt="Game 1 screenshot" onerror="this.src='https://placehold.co/400x200?text=No+Image+Yet'">
+        <h3>Untitled Tactics</h3>                <!-- 👈 EDIT: game title -->
+        <div class="game-tag">Strategy · PvP</div> <!-- 👈 EDIT: genre -->
+        <p>Command your squad in fast-paced skirmishes. Every unit has a unique ability.</p> <!-- 👈 EDIT: description -->
+        <div class="game-status-small"><i class="fas fa-hourglass-half"></i> In design · 2026</div> <!-- 👈 EDIT: status -->
+      </div>
+      
+      <!-- GAME SLOT 2 -->
+      <div class="game-card">
+        <img class="game-card-img" src="picture2.jpeg" alt="Game 2 screenshot" onerror="this.src='https://placehold.co/400x200?text=No+Image+Yet'">
+        <h3>Pixel Siege</h3>                    <!-- 👈 EDIT: title -->
+        <div class="game-tag">Action · Defense</div> <!-- 👈 EDIT: genre -->
+        <p>Build towers, summon troops, and survive endless waves in a medieval fantasy world.</p> <!-- 👈 EDIT: description -->
+        <div class="game-status-small"><i class="fas fa-microchip"></i> Early prototype</div> <!-- 👈 EDIT: status -->
+      </div>
+      
+      <!-- GAME SLOT 3 -->
+      <div class="game-card">
+        <img class="game-card-img" src="picture3.jpeg" alt="Game 3 screenshot" onerror="this.src='https://placehold.co/400x200?text=No+Image+Yet'">
+        <h3>Hype Drift</h3>                     <!-- 👈 EDIT: title -->
+        <div class="game-tag">Racing · Neon</div>   <!-- 👈 EDIT: genre -->
+        <p>Futuristic racing with tactical boosts. Drift, draft, and dominate the leaderboards.</p> <!-- 👈 EDIT: description -->
+        <div class="game-status-small"><i class="fas fa-drafting-compass"></i> Concept stage</div> <!-- 👈 EDIT: status -->
+      </div>
+      
+    </div>
+    <p style="text-align: center; margin-top: 1.5rem; font-size: 0.85rem; color: #aaa;">🎨 Images: name your files <strong>picture1.jpeg</strong>, <strong>picture2.jpeg</strong>, <strong>picture3.jpeg</strong> and upload them alongside this HTML.</p>
+  </section>
+
+  <!-- ABOUT SECTION -->
   <section id="about">
     <div class="section-title">🥧 about the baker</div>
     <div class="section-sub">ThePieHype · pieDev</div>
@@ -405,66 +250,47 @@
         I'm <strong>ThePieHype (pieDev)</strong>, a solo indie game developer who loves turning simple ideas into sharp, tactical experiences. Games should be easy to pick up but hard to put down — that’s what I’m all about.
       </div>
       <div class="about-text">
-        I believe in tight gameplay, clear rules, and surprises that make you lean forward in your chair. Whether you’re here for a quick battle or a deep tactical grind, I’ve got something cooking for you.
-      </div>
-      <div class="dev-link">
-        📌 feedback, friendly fire, and bug reports always welcome → <a href="mailto:officialthepiehype@gmail.com">officialthepiehype@gmail.com</a>
+        I believe in tight gameplay, clear rules, and surprises that make you lean forward in your chair. Feedback, friendly fire, and bug reports are always welcome.
       </div>
     </div>
   </section>
 
+  <!-- CONTACT + SOCIALS -->
   <section id="contact">
     <div class="section-title">📡 find me here</div>
     <div class="section-sub">follow development & get the game</div>
-    
     <div class="contact-grid">
-      <div class="contact-card">
-        <i class="fab fa-itch-io"></i>
-        <h4>Itch.io</h4>
-        <a href="https://thepiehype.itch.io/" target="_blank">thepiehype.itch.io</a>
-      </div>
-      <div class="contact-card">
-        <i class="fab fa-github"></i>
-        <h4>GitHub</h4>
-        <a href="https://github.com/PieHype-Dev" target="_blank">PieHype-Dev</a>
-      </div>
-      <div class="contact-card">
-        <i class="fas fa-envelope"></i>
-        <h4>Email</h4>
-        <a href="mailto:officialthepiehype@gmail.com">officialthepiehype@gmail.com</a>
-      </div>
+      <div class="contact-card"><i class="fab fa-itch-io"></i><h4>Itch.io</h4><a href="https://thepiehype.itch.io/" target="_blank">thepiehype.itch.io</a></div>
+      <div class="contact-card"><i class="fab fa-github"></i><h4>GitHub</h4><a href="https://github.com/PieHype-Dev" target="_blank">PieHype-Dev</a></div>
+      <div class="contact-card"><i class="fas fa-envelope"></i><h4>Email</h4><a href="mailto:officialthepiehype@gmail.com">officialthepiehype@gmail.com</a></div>
     </div>
-
     <div class="social-links">
-      <a href="https://x.com/ThePieHype" target="_blank" aria-label="X / Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.youtube.com/channel/UC2UbJUEDaRz0Z8PYVVYfTXQ" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://thepiehype.itch.io/" target="_blank" aria-label="Itch"><i class="fab fa-itch-io"></i></a>
-      <a href="https://github.com/PieHype-Dev" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://x.com/ThePieHype" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.youtube.com/channel/UC2UbJUEDaRz0Z8PYVVYfTXQ" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://thepiehype.itch.io/" target="_blank"><i class="fab fa-itch-io"></i></a>
+      <a href="https://github.com/PieHype-Dev" target="_blank"><i class="fab fa-github"></i></a>
     </div>
-
-    <!-- link to old / dev site (provided by user) -->
     <div class="old-site-card">
-      <i class="fas fa-archive"></i> legacy dev site / game dev blog → 
-      <a href="https://piehype-dev.github.io/Pie-sGameDevSite/" target="_blank" style="color:#ff7b2c; font-weight:600;">piehype-dev.github.io/Pie-sGameDevSite/</a>
+      <i class="fas fa-archive"></i> legacy dev blog → 
+      <a href="https://piehype-dev.github.io/Pie-sGameDevSite/" target="_blank" style="color:#ff7b2c;">piehype-dev.github.io/Pie-sGameDevSite/</a>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 ThePieHype — Indie Dev making interesting games. All rights reserved.</p>
-    <p style="margin-top: 0.5rem;"><i class="fas fa-dice-d6"></i> "Pie's MedievalBattleLines" coming May 2026 on Itch.io</p>
+    <p>© 2026 ThePieHype — Indie Dev making interesting games</p>
+    <p><i class="fas fa-dice-d6"></i> "Pie's MedievalBattleLines" coming May 2026 on Itch.io</p>
   </footer>
 </div>
 
 <script>
-  // Simple notify button (alert)
+  // Notify button for current game
   const notifyBtn = document.querySelector('.notify-btn');
   if (notifyBtn) {
     notifyBtn.addEventListener('click', () => {
-      alert("🍕🔥 Hype registered! You'll be the first to know when Pie's MedievalBattleLines launches. Follow on Itch.io or Twitter for the exact release date.");
+      alert("🍕🔥 You'll be notified when Pie's MedievalBattleLines launches! Follow on Itch.io or Twitter.");
     });
   }
-
-  // smooth scroll for nav links
+  // Smooth scroll for nav links
   document.querySelectorAll('.nav-links a, .hero-buttons a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
